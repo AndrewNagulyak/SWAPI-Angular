@@ -1,0 +1,12 @@
+.movies-list {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    font-size: 0.99em;
+    line-height: 1.3em;
+    margin-bottom: 20px;
+    letter-spacing: 0.03em;
+    color: #ddd;
+  }
+}

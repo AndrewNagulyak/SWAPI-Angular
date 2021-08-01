@@ -1,0 +1,46 @@
+<div class="container">
+  <form class="filter-form" [formGroup]="filterForm">
+    <div class="filter-form__value">
+      <div class="filter-form__label">Choose a species</div>
+      <div class="filter-form__field">
+        <kendo-dropdownlist [valueField]="'url'"
+                            [textField]="'name'"
+                            [valuePrimitive]="true"
+                            [formControlName]="'selectedSpecie'"
+                            [defaultItem]="{name:'All',url:'-1'}"
+                            [data]="speciesItems |async"></kendo-dropdownlist>
+      </div>
+    </div>
+    <div class="filter-form__value">
+      <div class="filter-form__label">Choose a movie</div>
+      <div class="filter-form__field">
+        <kendo-dropdownlist valueField="url"
+                            [textField]="'title'"
+                            [valuePrimitive]="true"
+                            [formControlName]="'selectedMovie'"
+                            [defaultItem]="{title:'All',url:'-1'}"
+                            [data]="moviesItems |async"></kendo-dropdownlist>
+      </div>
+    </div>
+    <div class="filter-form__value">
+      <div class="filter-form__label">
+        Born age range
+        Selected {{filterForm.controls.selectedDateRange.value | toStarWarsYears}}
+      </div>
+      <div class="filter-form__field">
+        <kendo-rangeslider
+          [formControlName]="'selectedDateRange'"
+          [min]="min"
+          [max]="max"
+          [smallStep]="smallStep"
+          [largeStep]="largeStep"
+        ></kendo-rangeslider>
+      </div>
+    </div>
+
+
+  </form>
+  <div class="people-list">
+    <app-people-list [filterData]="filterData"></app-people-list>
+  </div>
+</div>
