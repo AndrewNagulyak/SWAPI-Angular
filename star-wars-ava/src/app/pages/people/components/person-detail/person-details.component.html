@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="person-details">
+    <div class="person-details__title">{{person.name}}</div>
+    <div class="person-details__subtitle">{{person.birth_year}}</div>
+  </div>
+  <div class="info-block__wrapper">
+    <div *ngIf="person.starshipsModel?.length" class="person-starships info-block">
+      <div class="info-block__title">Starships</div>
+      <div class="info-block__item" *ngFor="let starship of person.starshipsModel">
+        {{starship.name}}
+      </div>
+    </div>
+    <div *ngIf="person.speciesModels?.length" class="person-species info-block">
+      <div class="info-block__title">Species</div>
+      <div class="info-block__item" *ngFor="let species of person.speciesModels">
+        {{species.name}}
+      </div>
+    </div>
+    <div *ngIf="person.filmsModel?.length" class="person-appearens info-block">
+      <div class="info-block__title">Appearance</div>
+      <div class="info-block__item" *ngFor="let movie of person.filmsModel">
+        {{movie.title}}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<kendo-grid
+  [data]="gridView"
+  [pageSize]="pageSize"
+  [skip]="(page-1) * pageSize"
+  [pageable]="(filterData?.selectedDateRange[0] === -400
+  && filterData?.selectedDateRange[1] === 400
+  && filterData?.selectedSpecie === '-1'
+  && filterData?.selectedMovie === '-1')"
+  [height]="400"
+  (pageChange)="pageChange($event)"
+>
+  <kendo-grid-column [routerLink]="" field="name" title="Name">
+    <ng-template kendoGridCellTemplate let-dataItem="dataItem">
+      <a class="link-block" [routerLink]="dataItem.url">{{dataItem.name}}</a>
+    </ng-template>
+  </kendo-grid-column>
+</kendo-grid>

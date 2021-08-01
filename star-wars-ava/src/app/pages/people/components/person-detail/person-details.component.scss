@@ -1,0 +1,48 @@
+.container {
+
+  .person-details {
+
+    background-image: url(https://static-mh.content.disney.io/starwars/assets/shared/bg_hash_top-dca2c5ab1b2e.png);
+    background-size: 7px;
+    background-repeat: repeat-x;
+    background-position: top left;
+    margin-bottom: 20px;
+
+    &__title {
+      font-size: 0.99em;
+      line-height: 1.3em;
+      letter-spacing: 0.03em;
+      color: #ddd;
+    }
+
+    &__subtitle {
+      font-size: 0.85em;
+      line-height: 1.24em;
+      color: #aaa;
+      margin-top: 0.18em;
+      padding-right: 1%;
+    }
+  }
+
+  .info-block {
+    margin-bottom: 20px;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__title {
+      margin-bottom: 8px;
+      color: #ddd;
+      font-size: 1.05em;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    &__item {
+      color: #9e4f60;
+    }
+  }
+
+}

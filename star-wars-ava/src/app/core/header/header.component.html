@@ -1,0 +1,19 @@
+<header class="header">
+  <div class="header__logo"></div>
+  <nav class="menu">
+    <ul class="menu__list">
+      <li class="menu__list-item">
+        <a [routerLink]="'/people'" [routerLinkActive]="'menu__item-text_selected'" class="menu__item-text">People</a>
+      </li>
+      <li class="menu__list-item">
+        <a [routerLink]="'/movies'" [routerLinkActive]="'menu__item-text_selected'" class="menu__item-text">Movies</a>
+      </li>
+      <li class="menu__list-item">
+        <a [routerLink]="'/home'" [routerLinkActive]="'menu__item-text_selected'" class="menu__item-text">Home</a>
+      </li>
+      <li class="menu__list-item">
+        <a [routerLink]="'/dark-side'" [routerLinkActive]="'menu__item-text_selected'" class="menu__item-text">Dark Side</a>
+      </li>
+    </ul>
+  </nav>
+</header>

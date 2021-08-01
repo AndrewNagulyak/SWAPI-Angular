@@ -1,0 +1,75 @@
+
+.header {
+  padding-top: 20px;
+  width: 100%;
+  background-position: center;
+  background-image: url(https://static-mh.content.disney.io/starwars/assets/navigation/navigation_stars-c6452e016c73.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__logo {
+    display: block;
+    width: 100%;
+    max-width: 203px;
+    height: 88px;
+    box-sizing: border-box;
+    background-image: url(https://static-mh.content.disney.io/starwars/assets/navigation/sw_logo_stacked-336c62367939.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+  }
+
+  .menu {
+    width: 100%;
+
+    &__list {
+      border-top: 1px solid #333;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    &__list-item {
+      display: flex;
+      outline: none;
+      border-left: 1px solid #333;
+      height: 38px;
+      align-items: center;
+      box-sizing: border-box;
+      font-family: "DIN Next W01 Regular", Helvetica, Arial, sans-serif;
+      padding: 0 22px;
+    }
+
+    &__item-text {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      font-size: 14px;
+      color: #999;
+      height: 100%;
+      position: relative;
+
+      &:hover {
+        color: #fff;
+      }
+
+      &_selected {
+        color: #fff;
+
+        &:after {
+          content: '';
+          color: #e15021;
+          bottom: 6px;
+          transform: translateX(50%);
+          right: 50%;
+          width: 32px;
+          border-top: 1px solid #fff;
+          box-shadow: 0 0 6px 2px;
+          position: absolute;
+        }
+      }
+    }
+  }
+}
